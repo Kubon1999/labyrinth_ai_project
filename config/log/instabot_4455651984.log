@@ -1,0 +1,87 @@
+2021-11-26 20:25:22,240 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2021-11-26 20:25:22,240 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /Users/hans/Library/Python/3.8/lib/python/site-packages/instabot/bot/bot.py
+2021-11-26 20:25:22,240 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2021-11-26 20:25:22,718 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2021-11-26 20:25:23,112 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2021-11-26 20:25:23,476 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2021-11-26 20:25:23,851 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2021-11-26 20:25:30,990 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [200]>
+2021-11-26 20:25:30,991 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'maze_account'!
+2021-11-26 20:25:30,992 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: True
+2021-11-26 20:25:31,706 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [400]>
+2021-11-26 20:25:31,706 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:31,707 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:31,707 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:31,707 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:32,186 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [400]>
+2021-11-26 20:25:32,186 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:32,186 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:32,186 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:32,186 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:32,634 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: zr/token/result/?device_id=android-65699724ce51a74a&token_hash=&custom_device_id=android-65699724ce51a74a&fetch_reason=token_expired returned response: <Response [400]>
+2021-11-26 20:25:32,634 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:32,634 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:32,634 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:32,635 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:33,171 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: multiple_accounts/get_account_family/ returned response: <Response [400]>
+2021-11-26 20:25:33,172 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:33,172 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:33,172 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:33,172 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:33,604 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [400]>
+2021-11-26 20:25:33,604 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:33,604 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:33,604 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:33,604 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:34,036 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: igtv/browse_feed/?prefetch=1 returned response: <Response [400]>
+2021-11-26 20:25:34,037 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:34,037 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:34,037 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:34,037 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:34,473 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: creatives/ar_class/ returned response: <Response [560]>
+2021-11-26 20:25:34,474 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b''
+2021-11-26 20:25:34,474 - instabot version: 0.117.0 (api) - ERROR - Request returns 560 error!
+2021-11-26 20:25:34,474 - instabot version: 0.117.0 (api) - ERROR - Error checking for `feedback_required`, response text is not JSON
+2021-11-26 20:25:34,474 - instabot version: 0.117.0 (api) - INFO - Full Response: <Response [560]>
+2021-11-26 20:25:34,475 - instabot version: 0.117.0 (api) - INFO - Response Text: 
+2021-11-26 20:25:34,475 - instabot version: 0.117.0 (api) - ERROR - Error unknown send request
+2021-11-26 20:25:34,888 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [400]>
+2021-11-26 20:25:34,888 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:34,888 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:34,889 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:34,889 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:35,345 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [400]>
+2021-11-26 20:25:35,345 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:35,345 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:35,345 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:35,346 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:35,761 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: media/blocked/ returned response: <Response [400]>
+2021-11-26 20:25:35,761 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:35,761 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:35,762 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:35,762 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:36,205 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: news/inbox/ returned response: <Response [400]>
+2021-11-26 20:25:36,205 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:36,206 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:36,206 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:36,206 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:36,625 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: loom/fetch_config/ returned response: <Response [400]>
+2021-11-26 20:25:36,625 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:36,626 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:36,626 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:36,626 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:37,084 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: scores/bootstrap/users/?surfaces=["autocomplete_user_list","coefficient_besties_list_ranking","coefficient_rank_recipient_user_suggestion","coefficient_ios_section_test_bootstrap_ranking","coefficient_direct_recipients_ranking_variant_2"] returned response: <Response [400]>
+2021-11-26 20:25:37,084 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:37,084 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:37,084 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:37,084 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:37,501 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: business/eligibility/get_monetization_products_eligibility_data/?product_types=branded_content returned response: <Response [400]>
+2021-11-26 20:25:37,502 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:37,502 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:37,502 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:37,502 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2021-11-26 20:25:37,886 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: business/branded_content/should_require_professional_account/ returned response: <Response [400]>
+2021-11-26 20:25:37,886 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"checkpoint_required","checkpoint_url":"https://i.instagram.com/privacy/checks/?cookie_consent=1\\u0026next=instagram://checkpoint/dismiss","lock":false,"flow_render_type":0,"status":"fail"}'
+2021-11-26 20:25:37,886 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2021-11-26 20:25:37,886 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: checkpoint_required
+2021-11-26 20:25:37,886 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
