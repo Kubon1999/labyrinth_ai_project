@@ -13,6 +13,8 @@ additionally this program allows you to find the shortest path in the labirynth 
 - bfs
 - a*
 - dijkstra
+
+
 co-creator : https://github.com/TomaszDaruk
 
 see it in action: https://youtube.com/shorts/NVU29nldKMc?feature=share
