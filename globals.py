@@ -28,7 +28,7 @@ def initialize():
     PURPLE = (190, 120 ,219)
     GRAY = (220,220,220)
     screen = pygame.display.set_mode((screen_w,screen_h))
-    bfs_found_path = False
+    bfs_found_path = True
     dijkstra_found_path = False
     stats_dfs = []
     stats_bfs = []

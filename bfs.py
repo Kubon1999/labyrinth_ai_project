@@ -8,9 +8,11 @@ def Index(x,y):
     return x + y * globals.grid_w
 
 def draw_path(v):
-    v.path = True
-    if v.parent != 0:
-        draw_path(v.parent)
+    if v:
+        v.path = True
+        if v.parent != 0:
+            draw_path(v.parent)
+            pygame.time.wait(100)
 
 def bfs(cells, cell):
     queue = []

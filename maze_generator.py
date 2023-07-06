@@ -1,14 +1,17 @@
-import pygame, sys, random,time, dfs, globals, PathFinding
+import pygame, sys, random,time, dfs, bfs, globals, PathFinding
+# Import required libraries
+from PIL import Image
+import colorsys
 random.seed(None, 2)
 # global
 
-grid_w = 10
-grid_h = 10
+grid_w = 20
+grid_h = 20
 screen_w = 2000
 screen_h = 2000
 offset = 10
-cell_size = 10
-line_width = 2
+cell_size = 30
+line_width = 1
 # colors
 GREEN = (0, 222, 0)
 BLUE = (0, 0, 222)
@@ -30,8 +33,6 @@ pygame.init()
 
 # image
 from PIL import Image
-im = Image.open('./mc-1.jpg')
-pixels = list(im.getdata())
 
 class Cell:
   def __init__(self, x, y):
@@ -43,26 +44,43 @@ class Cell:
     self.left = True
     self.visited = False
     self.searched = False
-    self.path = False
+    self.path = True
+    self.distance = 0 
+    self.parent = None
 
   def show(self):
     position_x = self.x * cell_size +offset
     position_y = self.y * cell_size +offset
     #EMPTY_COLOR = pixels[Index(self.x, self.y)]
-    EMPTY_COLOR = GRAY
+    hue = self.distance / (grid_w * grid_h)
+    rgb = colorsys.hsv_to_rgb(hue, 1, 1)  # Convert hue to RGB values
+    gradient_color2 = (int(rgb[0] * 255), int(rgb[1] * 255), int(rgb[2] * 255))
+    gradient_color = WHITE
+    EMPTY_COLOR = WHITE
 
     if self.visited:
-        pygame.draw.rect(screen, GRAY, pygame.Rect(position_x, position_y, cell_size, cell_size))
+        pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
 
     if self == current:
-        pygame.draw.rect(screen, RED, pygame.Rect(position_x, position_y, cell_size, cell_size))
+        pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
 
     if self.path:
-        pygame.draw.rect(screen, globals.PURPLE, pygame.Rect(
+        pygame.draw.rect(screen, gradient_color, pygame.Rect(
+        position_x, position_y, cell_size, cell_size))
+        EMPTY_COLOR = gradient_color
+        if globals.bfs_found_path == True:
+            print("found path")
+            pygame.draw.rect(screen, gradient_color2, pygame.Rect(
             position_x, position_y, cell_size, cell_size))
-        EMPTY_COLOR = globals.PURPLE
-        print("Ek kurwa")
+
+    if self.visited and  not self.path:
+        pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
     
+    if self.distance == 0:
+        pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
+
+    if self.x == 0 and self.y == 0:
+        pygame.draw.rect(screen, gradient_color, pygame.Rect(position_x, position_y, cell_size, cell_size))
     #if self.x == grid_w-1 and self.y == grid_h-1:
        # pygame.draw.rect(screen, EMPTY_COLOR, pygame.Rect(position_x, position_y, cell_size, cell_size))
 
@@ -128,19 +146,20 @@ def Setup():
     while True:
         #dfs.dfs(cells, cells[0])
         if current == cells[0] and cells[1].visited == True:
-            StartPathFinding()
-            break
+            #StartPathFinding()
+            bfs.bfs(cells, cells[0])
+            
 
         for event in pygame.event.get():
             #wait for end 
             if event.type == pygame.QUIT:
                 sys.exit(0)
-        #background
+        # background
         screen.fill(WHITE)
         Draw()
-        #update screen
+        # update screen
         pygame.display.flip()
-        #pygame.time.wait(1)
+        pygame.time.wait(5)
         if current == cells[0]:
 
             pygame.image.save(screen, "./maze.png")
@@ -164,7 +183,9 @@ def Draw():
     current.visited = True  
     #find next cell and mark it as visited
     next_current = current.checkNeighbors()
+    # Calculate the distance of the next current cell
     if next_current:
+        next_current.distance = current.distance + 1
         next_current.visited = True
 
         stack.append(current)
