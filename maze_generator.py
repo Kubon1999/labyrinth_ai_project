@@ -31,9 +31,6 @@ cells = []
 screen = pygame.display.set_mode((screen_w,screen_h))
 pygame.init()
 
-# image
-from PIL import Image
-
 class Cell:
   def __init__(self, x, y):
     self.x = x
@@ -70,7 +67,7 @@ class Cell:
         EMPTY_COLOR = gradient_color
         if globals.bfs_found_path == True:
             print("found path")
-            pygame.draw.rect(screen, gradient_color2, pygame.Rect(
+            pygame.draw.rect(screen, gradient_color, pygame.Rect(
             position_x, position_y, cell_size, cell_size))
 
     if self.visited and  not self.path:
