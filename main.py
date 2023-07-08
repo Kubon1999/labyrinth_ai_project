@@ -1,16 +1,18 @@
 import pygame, sys, random,time, dfs, bfs, globals, PathFinding
 # Import required libraries
 from PIL import Image
+im = Image.open('./mc-1.png')
+pixels = list(im.getdata())
 import colorsys
 random.seed(None, 2)
 # global
 
-grid_w = 20
-grid_h = 20
+grid_w = 40
+grid_h = 40
 screen_w = 2000
 screen_h = 2000
 offset = 10
-cell_size = 30
+cell_size = 10
 line_width = 1
 # colors
 GREEN = (0, 222, 0)
@@ -48,12 +50,13 @@ class Cell:
   def show(self):
     position_x = self.x * cell_size +offset
     position_y = self.y * cell_size +offset
-    #EMPTY_COLOR = pixels[Index(self.x, self.y)]
+    EMPTY_COLOR = WHITE
+    VISITED_COLOR = pixels[Index(self.x, self.y)]
     hue = self.distance / (grid_w * grid_h)
     rgb = colorsys.hsv_to_rgb(hue, 1, 1)  # Convert hue to RGB values
     gradient_color2 = (int(rgb[0] * 255), int(rgb[1] * 255), int(rgb[2] * 255))
     gradient_color = WHITE
-    EMPTY_COLOR = WHITE
+    #EMPTY_COLOR = WHITE
 
     if self.visited:
         pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
@@ -62,33 +65,38 @@ class Cell:
         pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
 
     if self.path:
-        pygame.draw.rect(screen, gradient_color, pygame.Rect(
+        pygame.draw.rect(screen, VISITED_COLOR, pygame.Rect(
         position_x, position_y, cell_size, cell_size))
-        EMPTY_COLOR = gradient_color
         if globals.bfs_found_path == True:
             print("found path")
-            pygame.draw.rect(screen, gradient_color, pygame.Rect(
+            pygame.draw.rect(screen, VISITED_COLOR, pygame.Rect(
             position_x, position_y, cell_size, cell_size))
 
     if self.visited and  not self.path:
-        pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
+        EMPTY_COLOR = VISITED_COLOR
+        pygame.draw.rect(screen, VISITED_COLOR, pygame.Rect(position_x, position_y, cell_size, cell_size))
     
     if self.distance == 0:
-        pygame.draw.rect(screen, WHITE, pygame.Rect(position_x, position_y, cell_size, cell_size))
+        pygame.draw.rect(screen, VISITED_COLOR, pygame.Rect(position_x, position_y, cell_size, cell_size))
 
     if self.x == 0 and self.y == 0:
-        pygame.draw.rect(screen, gradient_color, pygame.Rect(position_x, position_y, cell_size, cell_size))
+        pygame.draw.rect(screen, VISITED_COLOR, pygame.Rect(position_x, position_y, cell_size, cell_size))
     #if self.x == grid_w-1 and self.y == grid_h-1:
        # pygame.draw.rect(screen, EMPTY_COLOR, pygame.Rect(position_x, position_y, cell_size, cell_size))
 
+    if not(self.visited):
+        EMPTY_COLOR = WHITE
+        pygame.draw.rect(screen, EMPTY_COLOR, pygame.Rect(position_x, position_y, cell_size, cell_size))
+        
+
     if not(self.top):
-        pygame.draw.line(screen, EMPTY_COLOR, (position_x,           position_y),           (position_x+cell_size, position_y),           line_width) 
+        pygame.draw.line(screen, VISITED_COLOR, (position_x,           position_y),           (position_x+cell_size, position_y),           line_width) 
     if not(self.right):
-        pygame.draw.line(screen, EMPTY_COLOR, (position_x+cell_size, position_y+cell_size), (position_x, position_y+cell_size),           line_width)
+        pygame.draw.line(screen, VISITED_COLOR, (position_x+cell_size, position_y+cell_size), (position_x, position_y+cell_size),           line_width)
     if not(self.bottom):
-        pygame.draw.line(screen, EMPTY_COLOR, (position_x+cell_size, position_y+cell_size), (position_x, position_y+cell_size),           line_width)
+        pygame.draw.line(screen, VISITED_COLOR, (position_x+cell_size, position_y+cell_size), (position_x, position_y+cell_size),           line_width)
     if not(self.left):
-        pygame.draw.line(screen, EMPTY_COLOR, (position_x,           position_y+cell_size), (position_x, position_y),                     line_width)
+        pygame.draw.line(screen, VISITED_COLOR, (position_x,           position_y+cell_size), (position_x, position_y),                     line_width)
 
 
      
